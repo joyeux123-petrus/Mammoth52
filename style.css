@@ -57,6 +57,81 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem 2rem;
+  position: relative;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 2001;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: var(--accent-cyan);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--glass);
+    flex-direction: column;
+    width: 180px;
+    gap: 0;
+    box-shadow: 0 8px 32px var(--accent-cyan);
+    border-radius: 0 0 12px 12px;
+    border: 1.5px solid var(--glass-border);
+    display: none;
+    z-index: 2000;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links li {
+    width: 100%;
+    text-align: right;
+    margin: 0;
+  }
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: row;
+    gap: 0.3rem;
+    padding: 0.7rem 0.2rem;
+  }
+  .nav-links {
+    width: 100vw;
+    right: 0;
+    left: 0;
+    border-radius: 0 0 12px 12px;
+  }
 }
 
 .logo {
@@ -197,6 +272,8 @@ h2 {
 .interactive-logo {
   width: 120px;
   height: 120px;
+  max-width: 40vw;
+  max-height: 40vw;
   border-radius: 50%;
   box-shadow: 0 2px 16px var(--accent-cyan);
   background: var(--glass);
@@ -250,6 +327,8 @@ h2 {
   padding: 0.5rem;
   transition: box-shadow var(--transition);
   animation: mascot-breathe 3.5s ease-in-out infinite;
+  max-width: 90vw;
+  height: auto;
 }
 @keyframes mascot-breathe {
   0%, 100% { transform: scale(1); }
@@ -313,12 +392,16 @@ h2 {
   margin: 1.5rem 0 0.5rem 0;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .mammoth-video {
   border-radius: 16px;
   box-shadow: 0 2px 16px var(--accent-cyan);
   background: var(--glass);
   border: 2px solid var(--accent-cyan);
+  width: 100%;
+  max-width: 320px;
+  height: auto;
 }
 
 .editable-welcome {
@@ -326,6 +409,7 @@ h2 {
   gap: 0.7rem;
   align-items: center;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 #welcome-input {
   font-size: 1.1rem;
@@ -335,6 +419,8 @@ h2 {
   background: var(--glass);
   color: var(--text-main);
   transition: border var(--transition);
+  width: 100%;
+  max-width: 260px;
 }
 #welcome-input:focus {
   border: 1.5px solid var(--accent-cyan);
@@ -351,6 +437,7 @@ h2 {
   cursor: pointer;
   transition: background var(--transition), filter 0.3s;
   animation: pulse-glow 2.5s infinite alternate;
+  min-width: 100px;
 }
 #save-welcome:hover {
   background: linear-gradient(90deg, var(--accent-pink), var(--accent-cyan));
@@ -814,42 +901,59 @@ footer {
 }
 @media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
-    gap: 0.7rem;
-    padding: 0.7rem;
+    flex-direction: row;
+    gap: 0.3rem;
+    padding: 0.7rem 0.2rem;
   }
   .logo {
-    font-size: 1.3rem;
-  }
-  .nav-links {
-    gap: 0.7rem;
-  }
-  .section {
-    padding: 1rem 0.2rem;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
     font-size: 1.1rem;
   }
+  .nav-links {
+    gap: 0.3rem;
+    width: 100vw;
+    right: 0;
+    left: 0;
+    border-radius: 0 0 12px 12px;
+  }
+  .section {
+    padding: 0.7rem 0.1rem;
+  }
+  h1 {
+    font-size: 1.1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
   .memory-gallery {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
   .memory-card img {
-    height: 90px;
+    height: 60px;
   }
   .leader-card {
-    padding: 1rem 0.7rem;
+    padding: 0.7rem 0.3rem;
     min-width: 0;
   }
   .achievement-card {
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0.5rem;
   }
   .glory-content {
-    padding: 1rem 0.7rem;
+    padding: 0.7rem 0.3rem;
+  }
+  .editable-welcome {
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: stretch;
+  }
+  #welcome-input {
+    width: 100%;
+    max-width: 100%;
+  }
+  #save-welcome {
+    width: 100%;
+    min-width: 0;
   }
 }
 
