@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mammoth52 - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:700,400|Orbitron:700&display=swap" rel="stylesheet">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🦣 Mammoth52</div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#wall" id="memory-wall-link">Memory Wall</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#leaders">Leaders</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#glory">Mammoth Glory</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-content">
+    <!-- Home Section -->
+    <section id="home" class="section active">
+      <div class="welcome-container">
+        <div class="interactive-logo-container big-logo">
+          <img src="images/logo.png" alt="Mammoth52 Logo" id="mammoth52-logo" class="interactive-logo" />
+          <div class="logo-tooltip" id="logo-tooltip">This is the official Mammoth52 logo!</div>
+        </div>
+        <h1 class="animated-text" id="inspire-text">Unleash Your Greatness</h1>
+        <div class="mascot-3d-container">
+          <!-- Editable SVG Mammoth Mascot -->
+          <svg id="editable-mammoth" viewBox="0 0 220 180" width="180" height="180" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="110" cy="120" rx="70" ry="50" fill="#6b4f2c" stroke="#3e2a14" stroke-width="4" />
+            <ellipse cx="110" cy="70" rx="50" ry="40" fill="#8d6e3f" stroke="#3e2a14" stroke-width="4" />
+            <ellipse cx="70" cy="140" rx="18" ry="28" fill="#8d6e3f" stroke="#3e2a14" stroke-width="3" />
+            <ellipse cx="150" cy="140" rx="18" ry="28" fill="#8d6e3f" stroke="#3e2a14" stroke-width="3" />
+            <ellipse cx="90" cy="70" rx="8" ry="10" fill="#fff" />
+            <ellipse cx="130" cy="70" rx="8" ry="10" fill="#fff" />
+            <ellipse cx="90" cy="72" rx="3" ry="4" fill="#222" />
+            <ellipse cx="130" cy="72" rx="3" ry="4" fill="#222" />
+            <ellipse cx="110" cy="110" rx="12" ry="8" fill="#fff" opacity="0.7" />
+            <path d="M 110 110 Q 100 140 110 170 Q 120 140 110 110" fill="none" stroke="#fff" stroke-width="6" />
+            <path d="M 110 110 Q 120 140 110 170 Q 100 140 110 110" fill="none" stroke="#fff" stroke-width="6" />
+            <ellipse cx="110" cy="50" rx="18" ry="12" fill="#6b4f2c" stroke="#3e2a14" stroke-width="3" />
+            <ellipse cx="110" cy="40" rx="8" ry="5" fill="#fff" opacity="0.7" />
+            <ellipse cx="110" cy="40" rx="3" ry="2" fill="#222" />
+          </svg>
+          <div class="edit-mammoth-controls">
+            <label>Body Color: <input type="color" id="mammoth-body-color" value="#8d6e3f"></label>
+            <label>Ear Color: <input type="color" id="mammoth-ear-color" value="#6b4f2c"></label>
+          </div>
+        </div>
+        <div class="galaxy-bg"></div>
+        <button id="music-toggle">🎵 Toggle Music</button>
+        <div class="featured-media">
+          <video controls autoplay muted loop width="280" class="mammoth-video">
+            <source src="mamoth.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="editable-welcome">
+          <input id="welcome-input" type="text" maxlength="40" value="Welcome to Mammoth52!" />
+          <button id="save-welcome">Save</button>
+        </div>
+        <div class="floating-stars"></div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <h2>🦣 About Mammoth52</h2>
+      <div class="about-mammoth52">
+        <p><strong>Mammoth52</strong> is a vibrant and visionary class of <strong>52 dedicated students</strong> at <strong>Petit Séminaire Saint Léon Kabgayi</strong>, located in <strong>Muhanga District</strong>, in the <strong>Southern Province of Rwanda</strong>. United by faith, intellect, and purpose, Mammoth52 is more than just a class — it is a <strong>movement of future leaders</strong> committed to <strong>changing the world</strong> through <strong>spiritual works</strong>, <strong>social responsibility</strong>, and <strong>global impact</strong>.</p>
+        <p>Rooted in the values of <strong>excellence</strong>, <strong>humility</strong>, and <strong>brotherhood</strong>, Mammoth52 stands as a symbol of hope, transformation, and courage — walking together to build a better world, one spiritual step at a time.</p>
+        <button id="achievements-btn" class="achievements-btn">🏆 Notable Achievements</button>
+      </div>
+      <div id="achievements-modal" class="achievements-modal">
+        <div class="achievements-modal-content">
+          <span class="close-modal">&times;</span>
+          <h3>🏆 Notable Achievements</h3>
+          <p><strong>🌍 International Recognition: TWAGIRAMUNGU Raymond Reponse (a.k.a. Wakanda Boy)</strong></p>
+          <p>We proudly celebrate <strong>TWAGIRAMUNGU Raymond Reponse</strong>, known among his peers as <em>Wakanda Boy</em>, a brilliant member of <strong>Mammoth52</strong>, who has brought honor and pride to <strong>Petit Séminaire Saint Léon Kabgayi</strong> on the global stage.</p>
+          <ul>
+            <li>🧠 <strong>Pan-African Mathematics Olympiad (PAMO)</strong> participant, where he represented Rwanda with distinction, showcasing outstanding mathematical talent and problem-solving skills.</li>
+            <li>🌎 <strong>Nominated to United World Colleges (UWC-USA)</strong>, one of the world’s most prestigious international institutions focused on peacebuilding, academic excellence, and global citizenship.</li>
+          </ul>
+          <p>Raymond’s achievements reflect the spirit and mission of <strong>Mammoth52</strong> — to inspire transformation through excellence, discipline, and global engagement.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Wall Overlay Panel (hidden by default) -->
+    <div id="wall-overlay" class="wall-overlay">
+      <div class="wall-overlay-content">
+        <button id="close-wall-overlay" class="close-modal" aria-label="Close">&times;</button>
+        <h2>Mammoth Wall</h2>
+        <div id="mammoth-wall" style="margin-bottom: 24px;">
+          <h3>🦣 The Mammoth Wall</h3>
+          <p>Welcome to the Mammoth Wall! Here you can celebrate the spirit, unity, and achievements of Mammoth52. Add your own memories, messages, or artwork dedicated to the class!</p>
+        </div>
+        <!-- Bugesera Memories -->
+        <div class="album-group">
+          <div class="album-title">🏞️ Bugesera Adventures</div>
+          <div class="memory-gallery">
+            <div class="memory-card">
+              <img src="images/bugesera/IMG-20240721-WA0068.jpg" alt="Bugesera Memory 1" />
+              <div class="memory-caption">Bugesera Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/bugesera/IMG-20240722-WA0024.jpg" alt="Bugesera Memory 2" />
+              <div class="memory-caption">Bugesera Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/bugesera/IMG-20240722-WA0025.jpg" alt="Bugesera Memory 3" />
+              <div class="memory-caption">Bugesera Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/bugesera/IMG-20240722-WA0026.jpg" alt="Bugesera Memory 4" />
+              <div class="memory-caption">Bugesera Together We Roar</div>
+            </div>
+          </div>
+        </div>
+        <!-- Kamonyi Memories -->
+        <div class="album-group">
+          <div class="album-title">🌄 Kamonyi Memories - Together We Roar</div>
+          <div class="memory-gallery">
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145337.png" alt="Kamonyi Memory 1" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145417.png" alt="Kamonyi Memory 2" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145615.png" alt="Kamonyi Memory 3" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145650.png" alt="Kamonyi Memory 4" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145720.png" alt="Kamonyi Memory 5" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145743.png" alt="Kamonyi Memory 6" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/kamonyi/Screenshot 2025-08-06 145813.png" alt="Kamonyi Memory 7" />
+              <div class="memory-caption">Kamonyi Together We Roar</div>
+            </div>
+          </div>
+        </div>
+        <!-- Kigali Memories -->
+        <div class="album-group">
+          <div class="album-title">🏙️ Kigali City Vibes - Together We Roar</div>
+          <div class="memory-gallery">
+                      </div>
+        </div>
+        <!-- Ruyenzi Memories -->
+        <div class="album-group">
+          <div class="album-title">🌿 Ruyenzi Moments - Together We Roar</div>
+          <div class="memory-gallery">
+            <div class="memory-card">
+              <img src="images/ruyenzi/IMG-20240721-WA0069.jpg" alt="Ruyenzi Memory 1" />
+              <div class="memory-caption">Ruyenzi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/ruyenzi/IMG-20250417-WA0089.jpg" alt="Ruyenzi Memory 2" />
+              <div class="memory-caption">Ruyenzi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/ruyenzi/IMG-20250417-WA0090.jpg" alt="Ruyenzi Memory 3" />
+              <div class="memory-caption">Ruyenzi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/ruyenzi/IMG-20250417-WA0091.jpg" alt="Ruyenzi Memory 4" />
+              <div class="memory-caption">Ruyenzi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/ruyenzi/IMG-20250417-WA0092.jpg" alt="Ruyenzi Memory 5" />
+              <div class="memory-caption">Ruyenzi Together We Roar</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/ruyenzi/IMG-20250417-WA0093.jpg" alt="Ruyenzi Memory 6" />
+              <div class="memory-caption">Ruyenzi Together We Roar</div>
+            </div>
+          </div>
+        </div>
+        <!-- School Vibes Memories -->
+        <div class="album-group">
+          <div class="album-title">🎓 School Vibes</div>
+          <div class="memory-gallery">
+            <div class="memory-card">
+              <img src="images/school  vibes/IMG-20250626-WA0116.jpg" alt="School Vibes Memory 1" />
+              <div class="memory-caption">School Life Moments</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/school  vibes/IMG-20250626-WA0118.jpg" alt="School Vibes Memory 2" />
+              <div class="memory-caption">School Memories</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/school  vibes/IMG-20250626-WA0315.jpg" alt="School Vibes Memory 3" />
+              <div class="memory-caption">School Adventures</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/school  vibes/IMG-20250626-WA0316.jpg" alt="School Vibes Memory 4" />
+              <div class="memory-caption">School Fun Times</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/school  vibes/IMG-20250626-WA0318.jpg" alt="School Vibes Memory 5" />
+              <div class="memory-caption">School Experiences</div>
+            </div>
+            <div class="memory-card">
+              <img src="images/school  vibes/IMG-20250626-WA0321.jpg" alt="School Vibes Memory 6" />
+              <div class="memory-caption">School Vibes</div>
+            </div>
+          </div>
+        </div>
+        <div id="lightbox" class="lightbox"><span class="close">&times;</span>
+          <img class="lightbox-content" id="lightbox-img" src="" alt="" />
+          <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Profiles Section (hidden by default, shown by nav) -->
+    <section id="profiles" class="section" style="display:none;">
+      <h2>Classmate Profiles</h2>
+      <p>[Profiles coming soon]</p>
+    </section>
+    <!-- Achievements Section (hidden by default, shown by nav) -->
+    <section id="achievements" class="section" style="display:none;">
+      <h2>🏆 Notable Achievements</h2>
+      <div class="achievements-content">
+        <div class="achievement-highlight">
+          <h3>🌍 International Recognition</h3>
+          <div class="achievement-card">
+            <div class="achievement-avatar">🎓</div>
+            <div class="achievement-info">
+              <h4>TWAGIRAMUNGU Raymond Reponse</h4>
+              <p class="achievement-nickname">(a.k.a. Wakanda Boy)</p>
+              <p class="achievement-description">A brilliant member of <strong>Mammoth52</strong>, who has brought honor and pride to <strong>Petit Séminaire Saint Léon Kabgayi</strong> on the global stage.</p>
+              <div class="achievement-list">
+                <div class="achievement-item">
+                  <span class="achievement-icon">🧠</span>
+                  <div class="achievement-details">
+                    <h5>Pan-African Mathematics Olympiad (PAMO)</h5>
+                    <p>Represented Rwanda with distinction, showcasing outstanding mathematical talent and problem-solving skills.</p>
+                  </div>
+                </div>
+                <div class="achievement-item">
+                  <span class="achievement-icon">🌎</span>
+                  <div class="achievement-details">
+                    <h5>United World Colleges (UWC-USA) Nomination</h5>
+                    <p>Nominated to one of the world's most prestigious international institutions focused on peacebuilding, academic excellence, and global citizenship.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="achievement-conclusion">
+                <p><em>Raymond's achievements reflect the spirit and mission of <strong>Mammoth52</strong> — to inspire transformation through excellence, discipline, and global engagement.</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mammoth Glory Section (hidden by default, shown by nav) -->
+    <section id="glory" class="section" style="display:none;">
+      <h2>Mammoth Glory</h2>
+      <div class="glory-content">
+        <p>Discover more with <strong>Menya byinshi ku isi yacu</strong> — a YouTube channel by a proud Mammoth52 student, sharing knowledge and inspiration with the world!</p>
+        <a href="https://www.youtube.com/channel/UCekLdTuYPGjezVA75NkElGg" target="_blank" class="youtube-link">
+          <img src="https://www.youtube.com/s/desktop/6e6e2e3d/img/favicon_144x144.png" alt="YouTube" class="youtube-icon" />
+          Visit Menya byinshi ku isi yacu
+        </a>
+      </div>
+    </section>
+    <!-- Leaders section remains in main flow -->
+    <section id="leaders" class="section">
+      <h2>Leaders of Mammoth52</h2>
+      <div class="leaders-list">
+        <div class="leader-card head-leader">
+          <div class="leader-avatar">👑</div>
+          <div class="leader-info">
+            <h3>IGIHOZO Bless Ricardo</h3>
+            <p class="leader-role">Head of Mammoth52</p>
+          </div>
+        </div>
+        <!-- Add more leaders here if needed -->
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Mammoth52. Designed for fun, friendship, and memories.</p>
+  </footer>
+</body>
+</html>
